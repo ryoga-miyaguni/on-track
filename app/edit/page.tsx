@@ -88,8 +88,8 @@ export default function EditPage() {
                 <input 
                   type="number"
                   inputMode="numeric" 
-                  value={lesson.totalDurationMin}
-                  onChange={(e) => setLesson({...lesson, totalDurationMin: Number(e.target.value)})}
+                  value={lesson.totalDurationMin || ''}
+                  onChange={(e) => setLesson({...lesson, totalDurationMin: e.target.value === '' ? 0 : Number(e.target.value)})}
                   className="w-full p-3 border border-gray-300 rounded-lg font-bold text-lg bg-white"
                 />
               </div>
@@ -128,8 +128,8 @@ export default function EditPage() {
                       type="number" 
                       inputMode="numeric"
                       min="1"
-                      value={seg.durationMin}
-                      onChange={(e) => updateSegment(index, 'durationMin', Number(e.target.value))}
+                      value={seg.durationMin || ''}
+                      onChange={(e) => updateSegment(index, 'durationMin', e.target.value === '' ? 0 : Number(e.target.value))}
                       className="w-20 p-2 border border-gray-300 rounded-lg font-bold text-center text-lg bg-white"
                     />
                     <span className="text-sm font-bold text-gray-500">分</span>

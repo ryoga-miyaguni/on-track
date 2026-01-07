@@ -71,17 +71,15 @@ export default function Home() {
   const currentSegment = lesson.segments[currentSegmentIndex] || lesson.segments[0];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center items-center font-sans text-gray-900">
-      {/* スマホ画面コンテナ */}
-      <main className="w-full max-w-md h-dvh bg-white shadow-2xl overflow-hidden flex flex-col relative">
+    <div className="min-h-screen bg-gray-100 flex justify-center items-start md:items-center font-sans text-gray-900">
+      
+      <main className="w-full max-w-xl h-dvh bg-white shadow-2xl overflow-hidden flex flex-col relative">
         
-        {/* ① Header (15%) - プログレスバー復活、余白調整 */}
         <LessonHeader 
           elapsedTotal={elapsedTotal}
           totalDurationMin={lesson.totalDurationMin}
         />
 
-        {/* ② Main (45%) - ボタンデザイン修正 */}
         <ActiveSegment 
           segment={currentSegment}
           segmentElapsed={segmentElapsed}
@@ -90,7 +88,6 @@ export default function Home() {
           onAddTime={addTime}
         />
 
-        {/* ③ Footer (40%) - タイムライン */}
         <Timeline 
           segments={lesson.segments}
           currentIndex={currentSegmentIndex}
