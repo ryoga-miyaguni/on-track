@@ -10,7 +10,7 @@ export default function Timeline({ segments, currentIndex, onNext }: Props) {
   const nextTitle = segments[currentIndex + 1]?.title || '終了';
 
   return (
-    <footer className="h-[20%] shrink-0 bg-gray-50 border-t border-gray-200 flex flex-col shadow-[0_-10px_40px_rgba(0,0,0,0.05)] z-20">
+    <footer className="h-[30%] shrink-0 bg-gray-50 border-t border-gray-200 flex flex-col shadow-[0_-10px_40px_rgba(0,0,0,0.05)] z-20">
       
       <div className="p-3 bg-white border-b border-gray-100 shrink-0">
         <button 
