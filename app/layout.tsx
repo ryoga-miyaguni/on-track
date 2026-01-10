@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description: "授業やプレゼンのためのタイムマネジメントアプリ。全体時間と現在の活動時間、簡易的な授業・発表計画を1画面で可視化し、授業・プレゼンをサポートします。",
   keywords: ["授業タイマー", "模擬授業", "教員便利ツール", "タイムキーパー", "OnTrack", "教育実習"],
   authors: [{ name: "Ryoga" }],
+  verification: {
+    google: "HBye-qZFf8HeUmjA8vjjvm-Zkh7DFCD0ia0fqoWEnWw",
+  },
   openGraph: {
     title: "OnTrack - 授業用タイマーアプリ",
     description: "授業・発表の「今」と「あとどれくらい」が一目でわかる時間管理ツール。",
